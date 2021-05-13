@@ -935,6 +935,7 @@ namespace Mirror.Tests
         }
 
         [Test]
+#pragma warning disable 618
         public void TestWritingUri()
         {
 
@@ -946,6 +947,7 @@ namespace Mirror.Tests
             NetworkReader reader = new NetworkReader(writer.ToArray());
             Assert.That(reader.ReadUri(), Is.EqualTo(testUri));
         }
+#pragma warning restore 618
 
         [Test]
         public void TestList()

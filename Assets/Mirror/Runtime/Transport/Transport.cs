@@ -85,6 +85,7 @@ namespace Mirror
         /// Establish a connection to a server
         /// </summary>
         /// <param name="uri">The address of the server we are trying to connect to</param>
+        [Obsolete("We are considering to remove Uri support, unless someone has a good reason to keep it.")]
         public virtual void ClientConnect(Uri uri)
         {
             // By default, to keep backwards compatibility, just connect to the host
@@ -116,6 +117,7 @@ namespace Mirror
         /// Useful for network discovery
         /// </summary>
         /// <returns>the url at which this server can be reached</returns>
+        [Obsolete("We are considering to remove Uri support, unless someone has a good reason to keep it.")]
         public abstract Uri ServerUri();
 
         /// <summary>
